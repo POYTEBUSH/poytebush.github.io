@@ -62,7 +62,7 @@
                             <h1 class="display-4 text-center">Home</h1>
                             <hr>
                             <p class="lead text-center">Welcome to my site</p>
-                            <div id="workContainer" class="w-100" style="background: #e5e4e4">Test</div>
+                            <div id="workContainer" class="card-deck w-100" style="background: #e5e4e4"></div>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
         }
         $(document).ready(function(){
             $.getJSON("WorkData.json", function (data) {
-                $('#workContainer').append('<div class="card-deck">');
+
                 $.each(data, function (key, val) {
                     $('#workContainer').append('<div class="card WorkItem">'+
                     '<img class="card-img-top" src=".../100px180/" alt="Card image cap">'+
@@ -102,7 +102,6 @@
                     '<div class="card-footer"><small class="text-muted">Last updated 3 mins ago</small></div>'+
                     '</div>');
                 });
-                $('#workContainer').append('</div>');
             });
         });
     </script>
