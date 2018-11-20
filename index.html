@@ -62,7 +62,7 @@
                             <h1 class="display-4 text-center">Home</h1>
                             <hr>
                             <p class="lead text-center">Welcome to my site</p>
-                            <div id="workContainer" class="card-deck w-100" style="background: #e5e4e4"></div>
+                            <div id="workContainer" class="card-deck w-100"></div>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
 
                 $.each(data, function (key, val) {
                     $('#workContainer').append('<div class="card WorkItem">'+
-                    '<img class="card-img-top" src=".../100px180/" alt="Card image cap">'+
+                    '<img class="card-img-top" src="/Thumbnails/' + val.Thumbnail + '" alt="Card image cap">'+
                     '<div class="card-body">'+
                     '<h5 class="card-title">' + val.Title + '</h5>'+
                     '<p class="card-text">' + val.Subtitle + '</p>'+
