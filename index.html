@@ -86,7 +86,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body" id="WorkModalContent">
+                <div class="modal-body" id="WorkModalContent" style="max-height: 900px; overflow: auto">
                     <p>Modal body text goes here.</p>
                 </div>
             </div>
@@ -116,18 +116,6 @@
                         '</div>');
                 });
             });
-            // var data = $.parseJSON('[ { "Title": "Test Title", "Subtitle" : "Test Subtitle", "Thumbnail" : "thumb1.jpg", "ContentText" : "Test", "Categories" : "C++, AI" }, { "Title": "Test Title", "Subtitle" : "Test Subtitle", "Thumbnail" : "thumb1.jpg", "ContentText" : "Test", "Categories" : "C++, AI" }, { "Title": "Test Title", "Subtitle" : "Test Subtitle", "Thumbnail" : "thumb1.jpg", "ContentText" : "Test", "Categories" : "C++, AI" }, { "Title": "Test Title", "Subtitle" : "Test Subtitle", "Thumbnail" : "thumb1.jpg", "ContentText" : "Test", "Categories" : "C++, AI" }, { "Title": "Test Title", "Subtitle" : "Test Subtitle", "Thumbnail" : "thumb1.jpg", "ContentText" : "Test", "Categories" : "C++, AI" }, { "Title": "Test Title", "Subtitle" : "Test Subtitle", "Thumbnail" : "thumb1.jpg", "ContentText" : "Test", "Categories" : "C++, AI" }, { "Title": "Test Title", "Subtitle" : "Test Subtitle", "Thumbnail" : "thumb1.jpg", "ContentText" : "Test", "Categories" : "C++, AI" }, { "Title": "Test Title", "Subtitle" : "Test Subtitle", "Thumbnail" : "thumb1.jpg", "ContentText" : "Test", "Categories" : "C++, AI" } ]');
-            // $.each(data, function (key, val) {
-            //     workData.push(val);
-            //     $('#workContainer').append('<div class="mb-4 card bg-dark text-light WorkItem" style="min-width: 20% !important">' +
-            //         '<img class="card-img-top" src="\\Thumbnails\\' + val.Thumbnail + '" alt="Card image cap">'+                    
-            //         '<div class="card-img-overlay" OnClick="ToggleWorkModal(' + key + ')">' +
-            //         '<h5 class="card-title">' + val.Title + '</h5>' +
-            //         '<p class="card-text">' + val.Subtitle + '</p>' +
-            //         '</div>' +
-            //         '<div class="card-footer"><small class="text-muted">' + val.Categories + '</small></div>' +
-            //         '</div>');
-            // });
         });
         function ToggleWorkModal(index) {
             $('#WorkModalTitle').text(workData[index].Title);
