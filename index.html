@@ -92,7 +92,7 @@
             $.getJSON("WorkData.json", function (data) {
                 $('#workContainer').append('<div class="card-deck">');
                 $.each(data, function (key, val) {
-                    $('#workContainer').append('<div class="col-3"><div class="card WorkItem">'+
+                    $('#workContainer').append('<div class="card WorkItem">'+
                     '<img class="card-img-top" src=".../100px180/" alt="Card image cap">'+
                     '<div class="card-body">'+
                     '<h5 class="card-title">' + val.Title + '</h5>'+
@@ -100,7 +100,7 @@
                     '<a href="#" class="btn btn-primary">Go somewhere</a>'+
                     '</div>'+
                     '<div class="card-footer"><small class="text-muted">Last updated 3 mins ago</small></div>'+
-                    '</div></div>');
+                    '</div>');
                 });
                 $('#workContainer').append('</div>');
             });
