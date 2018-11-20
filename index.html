@@ -93,13 +93,13 @@
                 var items = [];
                 $.each(data, function (key, val) {
 
-                    $('#workContainer').append('<div class="card WorkItem">'+
+                    $('#workContainer').append('<div class="col-6"><div class="card WorkItem">'+
                     '<img class="card-img-top" src=".../100px180/" alt="Card image cap">'+
                     '<div class="card-body">'+
                     '<h5 class="card-title">' + val.Title + '</h5>'+
                     '<p class="card-text">' + val.Subtitle + '</p>'+
                     '<a href="#" class="btn btn-primary">Go somewhere</a>'+
-                    '</div></div>');
+                    '</div></div></div>');
                 });
             });
         });
