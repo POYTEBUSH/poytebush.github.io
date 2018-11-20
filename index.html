@@ -90,9 +90,8 @@
         }
         $(document).ready(function(){
             $.getJSON("WorkData.json", function (data) {
-                var items = [];
+                $('#workContainer').append('<div class="row">');
                 $.each(data, function (key, val) {
-
                     $('#workContainer').append('<div class="col-3"><div class="card WorkItem">'+
                     '<img class="card-img-top" src=".../100px180/" alt="Card image cap">'+
                     '<div class="card-body">'+
@@ -101,6 +100,7 @@
                     '<a href="#" class="btn btn-primary">Go somewhere</a>'+
                     '</div></div></div>');
                 });
+                $('#workContainer').append('</div>');
             });
         });
     </script>
