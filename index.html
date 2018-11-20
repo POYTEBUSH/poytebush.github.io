@@ -104,12 +104,11 @@
             // });
             var data = $.parseJSON('[{"Title": "Test Title","Subtitle": "Test Subtitle","Thumbnail": "thumb1.jpg","ContentText": "Test"}, { "Title": "Test Title", "Subtitle" : "Test Subtitle", "Thumbnail" : "thumb1.jpg", "ContentText" : "Test" } , { "Title": "Test Title", "Subtitle" : "Test Subtitle", "Thumbnail" : "thumb1.jpg", "ContentText" : "Test" } , { "Title": "Test Title", "Subtitle" : "Test Subtitle", "Thumbnail" : "thumb1.jpg", "ContentText" : "Test" } , { "Title": "Test Title", "Subtitle" : "Test Subtitle", "Thumbnail" : "thumb1.jpg", "ContentText" : "Test" } ]');
             $.each(data, function (key, val) {
-                    $('#workContainer').append('<div class="card text-white bg-dark WorkItem">'+
+                    $('#workContainer').append('<div class="card bg-dark WorkItem">'+
                     '<img class="card-img-top" src="\\Thumbnails\\' + val.Thumbnail + '" alt="Card image cap">'+
                     '<div class="card-img-overlay">'+
                     '<h5 class="card-title">' + val.Title + '</h5>'+
                     '<p class="card-text">' + val.Subtitle + '</p>'+
-                    '<a href="#" class="btn btn-primary">Go somewhere</a>'+
                     '</div>'+
                     '<div class="card-footer"><small class="text-muted">Last updated 3 mins ago</small></div>'+
                     '</div>');
