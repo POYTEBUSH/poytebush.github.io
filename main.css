@@ -7,24 +7,12 @@ body {
 .noborder{
     padding: 0px !important;
 }
-body {
-    font-family: 'Varela Round', sans-serif;
-}
-.menubg{
-    background: linear-gradient(to bottom right, #333333, #141414) !important;
-}
 .fullheight{
     height: 100%
 }
 .menuitem{
-    border-bottom: 2px solid #ff7d05;
+    border-bottom: 2px solid #00BC8C;
 }
-/* .menuitem :hover{
-    border-bottom: 2px solid #faff05 !important;
-} */
-/* .menuitem :click{
-    border-bottom: 2px solid #faff05;
-} */
 .maincolour{
-    color: #ff7d05;
+    color: #00BC8C;
 }

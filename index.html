@@ -10,12 +10,12 @@
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
         crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/regular.css" integrity="sha384-zkhEzh7td0PG30vxQk1D9liRKeizzot4eqkJ8gB3/I+mZ1rjgQk+BSt2F6rT2c+I"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Varela+Round" rel="stylesheet">
     <!-- <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="site.css"> -->
 
@@ -33,59 +33,71 @@
         crossorigin="anonymous"></script>
 
 
-    <div class="card">
-        <div class="card-header">
-                <nav class="navbar navbar-expand-sm navbar-b bg-dark navbar-dark noborder justify-content-center">
-                        <!-- Links -->
-                        <ul class="navbar-nav">
-                            <li class="nav-item menuitem">
-                                <a class="nav-link" href="#" onclick="ChangePage(0);">
-                                    <i class="fa fa-home"></i>&nbsp;Home</a>
-                            </li>
-                            <li class="nav-item menuitem">
-                                <a class="nav-link" href="#" onclick="ChangePage(1);">
-                                    <i class="fas fa-user-tie"></i>&nbsp;About Me</a>
-                            </li>
-                            <li class="nav-item menuitem">
-                                <a class="nav-link" href="#" onclick="ChangePage(2);">
-                                    <i class="fas fa-briefcase"></i>&nbsp;My Work</a>
-                            </li>
-                            <li class="nav-item menuitem">
-                                <a class="nav-link" href="#" onclick="ChangePage(3);">
-                                    <i class="fab fa-github"></i>&nbsp;My Github</a>
-                            </li>
-                        </ul>
-                    </nav>
+    <div class="card border-success w-75 mx-auto mt-5 h-75">
+        <div class="card-header" style="padding: 0px !important">
+            <nav class="navbar navbar navbar-expand-lg navbar-light bg-light noborder justify-content-center">
+                <!-- Links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item menuitem">
+                        <a class="nav-link" href="#" onclick="ChangePage(0);">
+                            <i class="fa fa-home"></i>&nbsp;Home</a>
+                    </li>
+                    <li class="nav-item menuitem">
+                        <a class="nav-link" href="#" onclick="ChangePage(1);">
+                            <i class="fas fa-briefcase"></i>&nbsp;My Work</a>
+                    </li>
+                    <li class="nav-item menuitem">
+                        <a class="nav-link" href="#" onclick="ChangePage(2);">
+                            <i class="fas fa-user-tie"></i>&nbsp;About Me</a>
+                    </li>
+                    <li class="nav-item menuitem">
+                        <a class="nav-link" href="#" onclick="ChangePage(3);">
+                            <i class="fab fa-github"></i>&nbsp;My Github</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
         <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    
-    <div class="container-fluid noborder fullheight">
-        <div id="imageBar" class="carousel slide fullheight" data-ride="carousel" data-interval="false">
-            <!-- The slideshow -->
-            <div class="carousel-inner fullheight">
-                <div class="carousel-item active fullheight  mt-5" id="HomePage">
-                    <div class="container-fluid" style="max-width: 75%">
-                        <h1 class="display-4 text-center">Home</h1>
-                        <hr>
-                        <p class="lead text-center">Welcome to my site</p>
-                        <div id="workContainer" class="card-deck w-100"></div>
-                    </div>
-                </div>
-                <div class="carousel-item fullheight">
-                    <div class="container-fluid mt-5" style="max-width: 75%">
-                        <h1 class="display-4 text-center">Next</h1>
-                        <hr>
-                        <p class="lead text-center">Welcome to my site</p>
+            <h1 class="text-center">Peter Bush - Portfolio</h1>
+            <div class="container-fluid noborder fullheight">
+                <div id="imageBar" class="carousel slide fullheight" data-ride="carousel" data-interval="false">
+                    <!-- The slideshow -->
+                    <div class="carousel-inner fullheight">
+                        <div class="carousel-item active fullheight  mt-5" id="HomePage">
+                            <div class="container-fluid" style="max-width: 75%">
+                                <p class="lead text-success text-center">Welcome to my portfolio</p>
+                                <hr>
+                                <p class="text-center">
+                                    I currently studying in the final year of BSc. Computer Games Programming at
+                                    Staffordshire
+                                    University, learning different aspects of games development whilst being able to
+                                    specialise in my interest of AI. I
+                                    have really enjoyed my studies and would like to continue into the industry.
+                                    <br>
+                                    My proudest event so far would be entering multiple games jams with a group of
+                                    friends and having the best game at
+                                    from the University in the UKIE 2018 event (We All Die Poor – Available under "My
+                                    Work").
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item fullheight  mt-5">
+                            <div class="container-fluid" style="max-width: 75%">
+                                <p class="lead text-success text-center">My Work</p>
+                                <hr>
+                                <p class="text-center">
+                                    Here are some items of work that developed, Some of my personal projects are
+                                    available on GitHub if you wish to view any source code.
+                                </p>
+                                <div id="workContainer" class="card-deck w-100"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="WorkDisplayModal"
         aria-hidden="true" id="WorkDisplayModal">
