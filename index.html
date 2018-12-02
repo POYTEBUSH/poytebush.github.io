@@ -32,27 +32,38 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
         crossorigin="anonymous"></script>
 
-    <nav class="navbar navbar-expand-sm navbar-b bg-dark navbar-dark noborder justify-content-center">
-        <!-- Links -->
-        <ul class="navbar-nav">
-            <li class="nav-item menuitem">
-                <a class="nav-link" href="#" onclick="ChangePage(0);">
-                    <i class="fa fa-home"></i>&nbsp;Home</a>
-            </li>
-            <li class="nav-item menuitem">
-                <a class="nav-link" href="#" onclick="ChangePage(1);">
-                    <i class="fas fa-user-tie"></i>&nbsp;About Me</a>
-            </li>
-            <li class="nav-item menuitem">
-                <a class="nav-link" href="#" onclick="ChangePage(2);">
-                    <i class="fas fa-briefcase"></i>&nbsp;My Work</a>
-            </li>
-            <li class="nav-item menuitem">
-                <a class="nav-link" href="#" onclick="ChangePage(3);">
-                    <i class="fab fa-github"></i>&nbsp;My Github</a>
-            </li>
-        </ul>
-    </nav>
+
+    <div class="card">
+        <div class="card-header">
+                <nav class="navbar navbar-expand-sm navbar-b bg-dark navbar-dark noborder justify-content-center">
+                        <!-- Links -->
+                        <ul class="navbar-nav">
+                            <li class="nav-item menuitem">
+                                <a class="nav-link" href="#" onclick="ChangePage(0);">
+                                    <i class="fa fa-home"></i>&nbsp;Home</a>
+                            </li>
+                            <li class="nav-item menuitem">
+                                <a class="nav-link" href="#" onclick="ChangePage(1);">
+                                    <i class="fas fa-user-tie"></i>&nbsp;About Me</a>
+                            </li>
+                            <li class="nav-item menuitem">
+                                <a class="nav-link" href="#" onclick="ChangePage(2);">
+                                    <i class="fas fa-briefcase"></i>&nbsp;My Work</a>
+                            </li>
+                            <li class="nav-item menuitem">
+                                <a class="nav-link" href="#" onclick="ChangePage(3);">
+                                    <i class="fab fa-github"></i>&nbsp;My Github</a>
+                            </li>
+                        </ul>
+                    </nav>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    
     <div class="container-fluid noborder fullheight">
         <div id="imageBar" class="carousel slide fullheight" data-ride="carousel" data-interval="false">
             <!-- The slideshow -->
