@@ -106,7 +106,7 @@
                 var categories = val.Categories.split(",");
                 var categoryIcons = "";
                 $.each(categories, function (key, val) {
-                    GetIcon(val);
+                    categoryIcons += GetIcon(val);
                 });
                 workData.push(val);
                 $('#workContainer').append('<div class="card card-sm mb-2">'+
