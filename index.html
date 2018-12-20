@@ -86,31 +86,7 @@
                         </div>
                         <div class="carousel-item">
                             <h2 class="greenunder">My Work:</h2>
-                            <div id="workContainer"></div>
-                            <div class="card card-sm mb-2">
-                                <div class="row">
-                                    <div class="col-xs-2 col-md-2 text-center my-2">
-                                        <img src="http://www.suttonsilver.co.uk/wp-content/uploads/blog-stock-03.jpg" alt="bootsnipp" class="ml-2 rounded img-fluid" />
-                                    </div>
-                                    <div class="col-xs-10 col-md-10 section-box">
-                                        <h2>
-                                            Bootsnipp <a href="http://bootsnipp.com/" target="_blank"><span class="glyphicon glyphicon-new-window">
-                                                </span></a>
-                                        </h2>
-                                        <p>
-                                            Design elements, playground and code snippets for Bootstrap HTML/CSS/JS
-                                            framework</p>
-                                        <hr />
-                                        <div class="row rating-desc">
-                                            <div class="col-md-12">
-                                                    <img src="https://img.icons8.com/color/50/000000/c-plus-plus-logo.png" class="img-fluid">
-                                                    <img src="https://img.icons8.com/color/50/000000/c-sharp-logo.png" class="img-fluid">
-                                                    <img src="https://img.icons8.com/color/50/000000/github.png" class="img-fluid">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div id="workContainer"></div>                            
                         </div>
                     </div>
                 </div>
@@ -123,18 +99,19 @@
     </section>
 
     <script>
+    var workData = [];
     $(document).ready(function () {
         $.getJSON("WorkData.json", function (data) {
             $.each(data, function (key, val) {
                 workData.push(val);
-                $('#workContainer').append('<div class="mb-4 card bg-dark text-light WorkItem" style="min-width: 20% !important">' +
-                    '<img class="card-img-top" src="\\Thumbnails\\' + val.Thumbnail + '" alt="Card image cap">' +
-                    '<div class="card-img-overlay" OnClick="ToggleWorkModal(' + key + ')">' +
-                    '<h5 class="card-title">' + val.Title + '</h5>' +
-                    '<p class="card-text">' + val.Subtitle + '</p>' +
-                    '</div>' +
-                    '<div class="card-footer"><small class="text-muted">' + val.Categories + '</small></div>' +
-                    '</div>');
+                $('#workContainer').append('<div class="card card-sm mb-2">'+
+                '<div class="row"><div class="col-xs-2 col-md-2 text-center my-2">'+
+                '<img src="'+ val.Thumbnail +'" alt="bootsnipp" class="ml-2 rounded img-fluid" />'+
+                '</div><div class="col-xs-10 col-md-10 section-box"><h2>' + val.Title + '<a href="http://bootsnipp.com/" target="_blank"><span class="glyphicon glyphicon-new-window">'+
+                '</span></a></h2><p>' + val.Subtitle + '</p><hr /><div class="row rating-desc">'+
+                '<div class="col-md-12"><img src="https://img.icons8.com/color/50/000000/c-plus-plus-logo.png" class="img-fluid">'+
+                '<img src="https://img.icons8.com/color/50/000000/c-sharp-logo.png" class="img-fluid"><img src="https://img.icons8.com/color/50/000000/github.png" class="img-fluid">'+
+                '</div></div></div></div></div>');
             });
         });
     });
