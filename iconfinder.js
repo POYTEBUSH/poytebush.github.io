@@ -23,5 +23,6 @@ function GetIcon(text){
     else if(text === "sdl"){
         return '<img src=" https://i.imgur.com/Ddga03K.png?1" class="img-fluid">'       
     }
+    
     return "";
 }
