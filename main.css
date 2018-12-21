@@ -78,8 +78,11 @@ body{
 }
 
 .imagegallery{
-  height: 200px;
+  height: 210px;
   overflow-x: scroll;
-  width: auto;
   white-space: nowrap;
+}
+.imagegallery_item{
+  vertical-align: baseline !important;   
+  border: solid #00D2A0;
 }
