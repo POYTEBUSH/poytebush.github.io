@@ -68,3 +68,8 @@ body{
 .glyphicon-comment { color:#27ae60;}
 .separator { padding-right:5px;padding-left:5px; }
 .section-box hr {margin-top: 0;margin-bottom: 5px;border: 0;border-top: 1px solid rgb(199, 199, 199);}
+
+.mouseover_card:hover { 
+  background-color: #efefef;
+  box-shadow: 2px 2px #222222
+}
