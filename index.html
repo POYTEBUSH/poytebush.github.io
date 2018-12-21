@@ -142,11 +142,10 @@
     });
     function OpenWorkModal(key){
         $('#workModalTitle').text(workData[key].Title);
-        $('#workModalTitle').html(workData[key].ContentText);
         var galleryItems = workData[key].ContentGallery.split(",");
         var galleryHTML = "";
         $.each(galleryItems, function (key, val) {
-            var split = val.split(':');
+            var split = val.split('~');
             if(split){
                 if(split[0] == "img"){
                     galleryHTML += '<img src="'+ split[1]+ '" class="img-fluid">';
@@ -157,6 +156,7 @@
             }
         });
         $('#workModalImageGallery').html(galleryHTML);
+        $('#workModalTitle').html(workData[key].ContentText);
         $('#workModal').modal('show');
     }
     </script>
