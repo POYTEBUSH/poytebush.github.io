@@ -78,7 +78,6 @@ body{
 }
 
 .imagegallery{
-  height: 210px;
   overflow-x: scroll;
   white-space: nowrap;
 }
