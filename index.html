@@ -29,7 +29,7 @@
     <header class="greenunder">
         <div class="overlay"></div>
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="test.mp4" type="video/mp4">
+            <source src="https://drive.google.com/file/d/1M3HJcQbtRFbthWj7lsA0liHIpVdVj7Vk/view?usp=sharing" type="video/mp4">
         </video>
         <div class="container h-100">
             <div class="d-flex text-center h-100">
@@ -109,7 +109,7 @@
                     categoryIcons += GetIcon(val);
                 });
                 workData.push(val);
-                $('#workContainer').append('<div class="card card-sm mb-2 mouseover_card">'+
+                $('#workContainer').append('<div class="card card-sm mb-2 mouseover_card" onclick="OpenWorkModal('+key+')">'+
                 '<div class="row"><div class="col-xs-2 col-md-2 text-center my-2">'+
                 '<img src="\\Thumbnails\\'+ val.Thumbnail +'" alt="bootsnipp" class="ml-2 rounded img-fluid" />'+
                 '</div><div class="col-xs-10 col-md-10 section-box"><h2>' + val.Title + '<a href="http://bootsnipp.com/" target="_blank"><span class="glyphicon glyphicon-new-window">'+
@@ -119,6 +119,9 @@
             });
         });
     });
+    function OpenWorkModal(){
+        alert(workData[key].Title);
+    }
     </script>
 </body>
 </html>
