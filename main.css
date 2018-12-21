@@ -85,4 +85,5 @@ body{
 .imagegallery_item{
   vertical-align: baseline !important;   
   border: solid #00D2A0;
+  max-height: 200px;
 }
