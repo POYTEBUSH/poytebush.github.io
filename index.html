@@ -109,6 +109,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                    <div class="row imagegallery" id="workModalImageGallery"></div>
                     <div id="workModalContent"></div>
                 </div>
                 <div class="modal-footer">
@@ -142,6 +143,20 @@
     function OpenWorkModal(key){
         $('#workModalTitle').text(workData[key].Title);
         $('#workModalTitle').html(workData[key].ContentText);
+        var galleryItems = val.ContentGallery.split(",");
+        var galleryHTML = "";
+        $.each(galleryItems, function (key, val) {
+            var split = val.split(':');
+            if(split){
+                if(split[0] == "img"){
+                    galleryHTML += '<img src="'+ split[1]+ '" class="img-fluid">';
+                }
+                else if(split[0] == "yt"){                    
+                    galleryHTML += '<iframe src="'+ split[1] + '" width="620" height="350" frameborder="0" allowfullscreen></iframe>'
+                }
+            }
+        });
+        $('#workModalImageGallery').html(galleryHTML);
         $('#workModal').modal('show');
     }
     </script>

@@ -76,3 +76,10 @@ body{
 .modal p {
   font-size: 0.8125rem;
 }
+
+.imagegallery{
+  height: 350px;
+  overflow-x: scroll;
+  width: auto;
+  white-space: nowrap;
+}
