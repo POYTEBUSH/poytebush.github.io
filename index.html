@@ -140,8 +140,9 @@
         });
     });
     function OpenWorkModal(key){
-        $('#workModal').modal('show');
         $('#workModalTitle').text(workData[key].Title);
+        $('#workModalTitle').html(workData[key].Content);
+        $('#workModal').modal('show');
     }
     </script>
 </body>

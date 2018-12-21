@@ -21,7 +21,7 @@ function GetIcon(text){
         return '<img src="https://img.icons8.com/color/48/000000/conference-background-selected.png" class="img-fluid">'
     }
     else if(text === "sdl"){
-        return '<img src=" https://raw.githubusercontent.com/IntelOrca/SDL2-CS/master/logo.png" class="img-fluid">'       
+        return '<img src=" https://i.imgur.com/Ddga03K.png?1" class="img-fluid">'       
     }
     return "";
 }
