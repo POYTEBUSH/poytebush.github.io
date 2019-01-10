@@ -91,9 +91,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="col-md-8 mx-auto">
-                    
-                </div> -->
         </div>
         </div>
     </section>
@@ -153,6 +150,10 @@
                 else if(split[0] == "yt"){                    
                     galleryHTML += '<iframe class="imagegallery_item" width="355" height="200" src="https://www.youtube.com/embed/'+ split[1] + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
                 }
+                $('#workModalImageGallery').show();
+            }
+            else{
+                $('#workModalImageGallery').hide();
             }
         });
         $('#workModalImageGallery').html(galleryHTML);
