@@ -106,3 +106,7 @@ header a{
 header a:hover{
   color:#00D2A0;
 }
+.cattag{
+  max-width: 32px !important;
+  max-height: 32px !important;
+}
