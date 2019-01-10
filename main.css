@@ -100,3 +100,9 @@ body{
   border: solid #00D2A0;
   max-height: 200px;
 }
+a{
+  color: #ffffff;
+}
+a:hover{
+  color:#00D2A0;
+}
