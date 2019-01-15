@@ -27,10 +27,15 @@
 
 <body>
     <header class="greenunder">
-        <!-- <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="https://drive.google.com/file/d/1M3HJcQbtRFbthWj7lsA0liHIpVdVj7Vk/view?usp=sharing" type="video/mp4">
-        </video> -->
-        <img src="https://colorbond.com/sites/default/files/styles/header_background_image_desktop_2x/public/images/header-bg/cb-colour-nightsky.jpg?itok=jzdPsNd_" class="img-fluid">
+            <section id="home-banner-box" class="home-banner loading">
+                    <div class="image video-slide" style="background-image: url($ImageURL)">
+                        <div class="video-background">
+                            <div class="video-foreground" id="YouTubeBackgroundVideoPlayer">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        <!-- <img src="https://colorbond.com/sites/default/files/styles/header_background_image_desktop_2x/public/images/header-bg/cb-colour-nightsky.jpg?itok=jzdPsNd_" class="img-fluid"> -->
         <div class="container h-100">
             <div class="d-flex text-center h-100">
                 <div class="my-auto w-100 text-white">
@@ -86,7 +91,7 @@
                         </div>
                         <div class="carousel-item">
                             <h2 class="greenunder">My Work:</h2>
-                            <div id="workContainer"></div>                            
+                            <div id="workContainer"></div>
                         </div>
                     </div>
                 </div>
@@ -117,49 +122,98 @@
     </div>
 
     <script>
-    var workData = [];
-    $(document).ready(function () {
-        $.getJSON("WorkData.json", function (data) {
-            $.each(data, function (key, val) {
-                var categories = val.Categories.split(",");
-                var categoryIcons = "";
-                $.each(categories, function (key, val) {
-                    categoryIcons += GetIcon(val);
+        var workData = [];
+        $(document).ready(function () {
+            $.getJSON("WorkData.json", function (data) {
+                $.each(data, function (key, val) {
+                    var categories = val.Categories.split(",");
+                    var categoryIcons = "";
+                    $.each(categories, function (key, val) {
+                        categoryIcons += GetIcon(val);
+                    });
+                    workData.push(val);
+                    $('#workContainer').append('<div class="card card-sm mb-2 mouseover_card" onclick="OpenWorkModal(' + key + ')">' +
+                        '<div class="row"><div class="col-xs-2 col-md-2 text-center my-2">' +
+                        '<img src="\\Thumbnails\\' + val.Thumbnail + '" alt="bootsnipp" class="ml-2 rounded img-fluid" />' +
+                        '</div><div class="col-xs-10 col-md-10 section-box"><h2>' + val.Title + '<a href="http://bootsnipp.com/" target="_blank"><span class="glyphicon glyphicon-new-window">' +
+                        '</span></a></h2><p>' + val.Subtitle + '</p><hr /><div class="row rating-desc">' +
+                        '<div class="col-md-12">' + categoryIcons +
+                        '</div></div></div></div></div>');
                 });
-                workData.push(val);
-                $('#workContainer').append('<div class="card card-sm mb-2 mouseover_card" onclick="OpenWorkModal('+key+')">'+
-                '<div class="row"><div class="col-xs-2 col-md-2 text-center my-2">'+
-                '<img src="\\Thumbnails\\'+ val.Thumbnail +'" alt="bootsnipp" class="ml-2 rounded img-fluid" />'+
-                '</div><div class="col-xs-10 col-md-10 section-box"><h2>' + val.Title + '<a href="http://bootsnipp.com/" target="_blank"><span class="glyphicon glyphicon-new-window">'+
-                '</span></a></h2><p>' + val.Subtitle + '</p><hr /><div class="row rating-desc">'+
-                '<div class="col-md-12">'+categoryIcons+
-                '</div></div></div></div></div>');
             });
         });
-    });
-    function OpenWorkModal(key){
-        $('#workModalTitle').text(workData[key].Title);
-        var galleryItems = workData[key].ContentGallery.split(",");
-        var galleryHTML = "";
-        $.each(galleryItems, function (key, val) {
-            var split = val.split('~');
-            if(split){
-                if(split[0] == "img"){
-                    galleryHTML += '<img src="'+ split[1]+ '" class="imagegallery_item img-fluid">';
+        function OpenWorkModal(key) {
+            $('#workModalTitle').text(workData[key].Title);
+            var galleryItems = workData[key].ContentGallery.split(",");
+            var galleryHTML = "";
+            $.each(galleryItems, function (key, val) {
+                var split = val.split('~');
+                if (split) {
+                    if (split[0] == "img") {
+                        galleryHTML += '<img src="' + split[1] + '" class="imagegallery_item img-fluid">';
+                    }
+                    else if (split[0] == "yt") {
+                        galleryHTML += '<iframe class="imagegallery_item" width="355" height="200" src="https://www.youtube.com/embed/' + split[1] + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+                    }
+                    $('#workModalImageGallery').show();
                 }
-                else if(split[0] == "yt"){                    
-                    galleryHTML += '<iframe class="imagegallery_item" width="355" height="200" src="https://www.youtube.com/embed/'+ split[1] + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+                else {
+                    $('#workModalImageGallery').hide();
                 }
-                $('#workModalImageGallery').show();
+            });
+            $('#workModalImageGallery').html(galleryHTML);
+            $('#workModalContent').html(workData[key].ContentText);
+            $('#workModal').modal('show');
+        }
+    </script>
+    <script>
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('YouTubeBackgroundVideoPlayer', {
+                height: $(document).height(),
+                width:  $(document).width(),
+                videoId: 'M7lc1UVf-VE',
+                playerVars: {
+                    playlist: '{$loadYouTubeVideoID}',
+                    autoplay: 1,        // Auto-play the video on load
+                    autohide: 1,
+                    disablekb: 1,
+                    controls: 0,        // Hide pause/play buttons in player
+                    showinfo: 0,        // Hide the video title
+                    modestbranding: 1,  // Hide the Youtube Logo
+                    loop: 1,            // Run the video in a loop
+                    fs: 0,              // Hide the full screen button
+                    autohide: 0,         // Hide video controls when playing
+                    rel: 0,
+                    enablejsapi: 1
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+        var done = false;
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING && !done) {
+                setTimeout(stopVideo, 6000);
+                done = true;
             }
-            else{
-                $('#workModalImageGallery').hide();
-            }
-        });
-        $('#workModalImageGallery').html(galleryHTML);
-        $('#workModalContent').html(workData[key].ContentText);
-        $('#workModal').modal('show');
-    }
+        }
+        function stopVideo() {
+            player.stopVideo();
+        }
     </script>
 </body>
+
 </html>
