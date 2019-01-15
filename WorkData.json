@@ -41,10 +41,10 @@
     },
     {
         "Title": "Icy Climber",
-        "Subtitle": "Test Subtitle",
-        "Thumbnail": "thumb1.jpg",
+        "Subtitle": "Group based Android game project",
+        "Thumbnail": "icyclimber.png",
         "ContentGallery" : "", 
-        "ContentText": "<h4>Introduction</h4> <p>Icy Climber was an Android game developed in Love2D Lua aimed at a younger audience, the game was developed as part of a team module and was pitched infront of developers at Playground Games. </p> <iframe width='100%' height='66%' src='https://www.youtube.com/embed/Jlb6hLQqxrg' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+        "ContentText": "<h4>Introduction</h4> <p>Icy Climber was an Android game developed in Love2D Lua aimed at a younger audience, the game was developed as part of a team module and was pitched infront of developers at Playground Games. </p> <iframe width='100%' height='100%' src='https://www.youtube.com/embed/Jlb6hLQqxrg' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
         "Categories": "c++,ai"
     },
     {
