@@ -33,7 +33,7 @@
         </ul>
     </li>
 </ul>
-<h4>The Game</h4>>
+<h4>The Game</h4>
 <p>This game utilises a physics system programmed in C++ using a combination of Mass Aggregate and a rigid body system to simulate a football field with extra features. Each game object in the game is assigned an Appearance (how it looks and its geometry) a Transform (where it is located in world space, its rotation and its scale) and a Particle Model which is used to apply forces and update the position and rotation in relation to them. Each particle model is initialised to have values for its acceleration and velocity along with a pointer to the game objects transform, allowing for the transformation of the object. We also pass into the particle model constructer a collision radius for spherical based collisions, a mass to allow calculation of weight in relation to gravity and a Boolean to specify  whether or not the game object is affected by gravity or not (allows for assets such as the arena to be ignored). In the constructor of this class, I also specify the flow and move type of the object that are both enums. </p>
 <pre>
     <code>
@@ -42,8 +42,9 @@
             NOTSET,
             LAMINAR,
             TURBULENT
-        };
-        
+        };                   
+    </code>
+    <code>
         enum MoveType
         {
             CONSTACCELL,
@@ -62,9 +63,9 @@
         object->SetVelocity(object->GetVelocity().DotProduct(Vector3D(-1.0f, 0.0f, 0.0f)));
         The ball and the player also collide where the velocity of the objects are set to be their current velocity – the momentum of the collider / the current objects mass.
         </p>
-<h4>My particle system works by instantiating a set number of game objects into a vector stack and then applying a similar force to them all from an emitter point, Using object pooling I am able to move the objects with the forces and then when they hit the specified max height they are moved back to the emmiter point to move again.
+<p>My particle system works by instantiating a set number of game objects into a vector stack and then applying a similar force to them all from an emitter point, Using object pooling I am able to move the objects with the forces and then when they hit the specified max height they are moved back to the emmiter point to move again.
        <code> ParticleSystem(int NumOfParticles, GameObject* Particle, Vector3D startPos, float maxHeight);</code>
         The designer is able to pass in any already instantiated game object to the particle system along with the number of objects in the system and their max height, they can also choose between a spray effect and a fountain effect where the particles will move in a different way using the 
         <code>void SetParticleSystemEffect(ParticleSystemType type) { mSystemType = type; };</code>
         Due to all of the particles being smaller game objects without colliders they are drawn in the same way to the screen and updated also.
-        </h4>        
+</p>        
