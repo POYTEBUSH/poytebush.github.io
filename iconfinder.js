@@ -23,6 +23,9 @@ function GetIcon(text){
     else if(text === "sdl"){
         return '<img src=" https://i.imgur.com/Ddga03K.png?1" class="img-fluid cattag">'       
     }
+    else if(text === "unity"){
+        return '<img src="https://img.icons8.com/ios/50/000000/unity.png" class="img-fluid cattag">'       
+    }
     
     return "";
 }
