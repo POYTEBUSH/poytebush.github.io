@@ -36,7 +36,7 @@
         "Subtitle": "Additional modules in AI from Third years of Uni",
         "Thumbnail": "CatalystLogo.bmp",
         "ContentGallery" : "",
-        "ContentText": "Coming Soon",
+        "ContentText": "Ongoing modules involving work on Genetic Algorithms, Game of Life, Min-Max algorithms with Alpha beta pruning and finally neural networks.",
         "Categories": "c++,ai,visualstudio"
     },
     {
@@ -44,7 +44,7 @@
         "Subtitle": "Pathinding and Finite state machines for AI",
         "Thumbnail": "tanks.PNG",
         "ContentGallery" : "",
-        "ContentText": "<h4>Introduction</h4> <p>Starting with a basic framework which contained a \"Dumb\" tank that had simple code to move to a point. The challenge of this module was to add pathfinding (A*) and decision making to help my tank win a battle against others. I was able to create a leading tank which is shown in the video below (purple tank). <i>Note that the other tanks were unavailable to show</i> </p> <iframe width='100%' height='450px' src='https://www.youtube.com/embed/0vrgX1KhDY' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+        "ContentText": "<h4>Introduction</h4> <p>Starting with a basic framework which contained a \"Dumb\" tank that had simple code to move to a point. The challenge of this module was to add pathfinding (A*) and decision making to help my tank win a battle against others. I was able to create a leading tank which is shown in the video below (purple tank). <i>Note that the other tanks were unavailable to show</i> </p> <iframe width='100%' height='450px' src='https://www.youtube.com/embed/xFz9gQKbB14' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe><h4>Github</h4>&nbsp;<a href='https://github.com/POYTEBUSH/UniWork_AI/tree/master/GameAI/GameAI/PeterBush' target='_blank'>Link</a>",
         "Categories": "c++,ai,visualstudio"
     },
     {
