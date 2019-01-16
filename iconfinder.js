@@ -26,6 +26,24 @@ function GetIcon(text){
     else if(text === "unity"){
         return '<img src="https://img.icons8.com/ios/50/000000/unity.png" class="img-fluid cattag">'       
     }
+    else if(text === "html"){
+        return '<img src="https://img.icons8.com/color/48/000000/html-5.png" class="img-fluid cattag">'       
+    }
+    else if(text === "js"){
+        return '<img src="https://img.icons8.com/color/48/000000/js.png" class="img-fluid cattag">'       
+    }
+    else if(text === "css"){
+        return '<img src="https://img.icons8.com/color/48/000000/css3.png" class="img-fluid cattag">'       
+    }
+    
+    else if(text === "xamarin"){
+        return '<img src="https://img.icons8.com/color/48/000000/xamarin.png" class="img-fluid cattag">'       
+    }
+    
+    else if(text === "jira"){
+        return '<img src="https://img.icons8.com/color/48/000000/js.png" class="img-fluid cattag">'       
+    }
+    
     
     return "";
 }

@@ -40,6 +40,14 @@
         "Categories": "c++,ai,visualstudio"
     },
     {
+        "Title": "Rake Mark Placement",
+        "Subtitle": "Web and mobile development placement",
+        "Thumbnail": "eQuiplogo.jpg",
+        "ContentGallery" : "",
+        "ContentText": "Ongoing modules involving work on Genetic Algorithms, Game of Life, Min-Max algorithms with Alpha beta pruning and finally neural networks.",
+        "Categories": "c#,html,css,js,xamarin,visualstudio"
+    },,
+    {
         "Title": "AI Tanks",
         "Subtitle": "Pathinding and Finite state machines for AI",
         "Thumbnail": "tanks.PNG",
